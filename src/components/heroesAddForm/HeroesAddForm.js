@@ -30,15 +30,15 @@ const HeroesAddForm = () => {
     }
 
     const renderFilters = (filters, status) => {
-        if (status === 'loading') {
+        if (status === "loading") {
             return <option>Loading items</option>
-        } else if (status === 'error') {
+        } else if (status === "error") {
             return <option>Error Loading</option>
         }
 
         if (filters && filters.length > 0) {
             return filters.map(({name, label}) =>  {
-                if (name === 'all') return;
+                if (name === "all") return;
 
                 return <option key={name} value={name}>{label}</option>
             })

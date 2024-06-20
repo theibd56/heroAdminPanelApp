@@ -17,6 +17,12 @@
       "name": "Marine hero",
       "description": "Like Aquaman, but not DC.",
       "element": "water"
+    },
+    {
+      "id": "8ebff6dc-a27b-4928-ab00-ad1d12baac07",
+      "name": "wmind",
+      "description": "wmind",
+      "element": "fire"
     }
   ],
   "filters": [
