@@ -1,55 +1,54 @@
 {
   "heroes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Shadow",
       "description": "Who's that?",
       "element": "fire"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "An unknown hero",
       "description": "Lurking in the shadows.и",
       "element": "wind"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Marine hero",
       "description": "Like Aquaman, but not DC.",
       "element": "water"
-    },
-    {
-      "id": "8ebff6dc-a27b-4928-ab00-ad1d12baac07",
-      "name": "wmind",
-      "description": "wmind",
-      "element": "fire"
     }
   ],
   "filters": [
     {
       "name": "all",
       "label": "All",
-      "className": "btn-outline-dark"
+      "className": "btn-outline-dark",
+      "id": "8fa0"
     },
     {
       "name": "fire",
       "label": "Fire",
-      "className": "btn-danger"
+      "className": "btn-danger",
+      "id": "6200"
     },
     {
       "name": "water",
       "label": "Water",
-      "className": "btn-primary"
+      "className": "btn-primary",
+      "id": "8ef8"
     },
     {
       "name": "wind",
       "label": "Wind",
-      "className": "btn-success"
+      "className": "btn-success",
+      "id": "03a0"
     },
     {
       "name": "earth",
       "label": "Earth",
-      "className": "btn-secondary"
+      "className": "btn-secondary",
+      "id": "0f63"
     }
   ]
 }
