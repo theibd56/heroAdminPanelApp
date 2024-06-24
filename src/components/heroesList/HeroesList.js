@@ -8,6 +8,8 @@ import { heroesFetching, heroesFetched, heroesFetchingError, heroDeleted} from '
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner'; 
 
+import './heroesList.scss';
+
 const HeroesList = () => {
 
     const filteredHeroesSelector = createSelector(
@@ -64,7 +66,7 @@ const HeroesList = () => {
             return (
                 <CSSTransition 
                     key={id}
-                    timeout={500}
+                    timeout={300}
                     classNames="hero">
                     <HeroesListItem  {...props} onDelete={() => onDelete(id)}/>
                 </CSSTransition>
