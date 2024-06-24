@@ -9,10 +9,10 @@ import Spinner from '../spinner/Spinner';
 
 const HeroesList = () => {
     const filteredHeroes = useSelector(state => {
-        if (state.activeFilter === 'all') {
-            return state.heroes
+        if (state.filters.activeFilter === 'all') {
+            return state.heroes.heroes
         } else {
-            return state.heroes.filter(item => item.element === state.activeFilter)
+            return state.heroes.heroes.filter(item => item.element === state.filters.activeFilter)
         }
     })
     const heroesLoadingStatus = useSelector(state => state.heroesLoadingStatus);
@@ -44,7 +44,7 @@ const HeroesList = () => {
     const renderHeroesList = (arr) => {
         if (arr.length === 0) {
             return (
-                <CSSTransition
+                <CSSTransition   
                     timeout={0}
                     classNames="hero">
                     <h5 className="text-center mt-5">Героев пока нет</h5>
