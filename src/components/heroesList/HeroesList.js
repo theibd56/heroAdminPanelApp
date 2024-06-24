@@ -34,6 +34,7 @@ const HeroesList = () => {
         // eslint-disable-next-line
     }, []);
 
+    // eslint-disable-next-line
     const onDelete = useCallback((id) => {
         request(`http://localhost:3001/heroes/${id}`, "DELETE")
             .then(data => console.log(data, 'deleted'))
