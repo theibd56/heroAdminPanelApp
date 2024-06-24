@@ -3,8 +3,7 @@ const initialState = {
     heroesLoadingStatus: 'idle',
     filters: [],
     filtersLoadingStatus: 'idle',
-    activeFilter: 'all',
-    filteredHeroes: []
+    activeFilter: 'all'
 }
 
 const reducer = (state = initialState, action) => {
@@ -18,9 +17,6 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 heroes: action.payload,
-                filteredHeroes: state.activeFilter === 'all' ? 
-                                action.payload : 
-                                action.payload.filter(item => item.element === state.activeFilter),
                 heroesLoadingStatus: 'idle'
             }
         case 'HEROES_FETCHING_ERROR':
@@ -48,27 +44,16 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 activeFilter: action.payload,
-                filteredHeroes: action.payload === 'all' ? 
-                                state.heroes :
-                                state.heroes.filter(item => item.element === action.payload)
             }
         case 'HERO_CREATED':   
-            let newCreatedHeroList = [...state.heroes, action.payload];
             return {
                 ...state,
-                heroes: newCreatedHeroList,
-                filteredHeroes: state.activeFilter === 'all' ? 
-                                newCreatedHeroList : 
-                                newCreatedHeroList.filter(item => item.element === state.activeFilter)
+                heroes: [...state.heroes, action.payload],
             }
         case 'HERO_DELETED': 
-            const newHeroList = state.heroes.filter(item => item.id !== action.payload);
             return {
                 ...state,
-                heroes: newHeroList,
-                filteredHeroes: state.activeFilter === 'all' ? 
-                                newHeroList : 
-                                newHeroList.filter(item => item.element === state.activeFilter)
+                heroes: state.heroes.filter(item => item.id !== action.payload),
             }
         default: return state
     }
